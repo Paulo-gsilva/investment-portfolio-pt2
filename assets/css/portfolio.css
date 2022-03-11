@@ -1,0 +1,1097 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root{
+    --082032: #082032;
+    --2C394B: #2C394B;
+    --334756: #334756;
+    --FF4C29: #FF4C29;
+    --ff4d29bd: #ff4d29bd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100vw;
+    background: #070707;
+    font-family: 'Kanit', sans-serif;
+}
+
+.preload-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preload{
+    width: 8rem;
+    height: 8rem;
+}
+
+.preload::after{
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 0.7rem solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: load 1s infinite linear;
+}
+
+.all-content{
+    display: none;
+}
+
+.header-container{
+    color: var(--FF4C29);
+    background: var(--2C394B);
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--082032);
+}
+
+.left-header-container{
+    margin: auto 0;
+    margin-left: 16rem;
+}
+
+.right-header-container{
+    width: 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.right-header-container button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-right-header-container{
+    width: 8.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-right-header-container button{
+    width: 3rem;
+    height: 3rem;
+}
+
+.container-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-aside-container{
+    background: var(--2C394B);
+    width: 15rem;
+    height: 40.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-aside-container, .bottom-aside-container{
+    color: var(--ff4d29bd);
+    margin: 0 4rem;
+}
+
+.top-aside-container h1{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.top-aside-container div{
+    margin: 1rem 0;
+}
+
+.top-aside-container div h2:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    font-size: 1.6rem;
+}
+
+.bottom-aside-container button{
+    border: none;
+    background: var(--082032);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 20px;
+    color: var(--FF4C29);
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.bottom-aside-container button:hover{
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: -0.1rem 0.1rem white;
+}
+
+.middle-container{
+    width: 55rem;
+    margin: 1rem auto;
+}
+
+.coins-middle-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    max-width: 55rem;
+    overflow-y: hidden;
+    border-radius: 20px;
+}
+
+.coins-middle-container::-webkit-scrollbar{
+    height: 0.3rem;
+    background: var(--334756);
+    border-radius: 2rem;
+    width: 20rem;
+}
+
+.coins-middle-container::-webkit-scrollbar-thumb{
+    background: var(--FF4C29);
+    border-radius: 2rem;
+}
+
+.coins-middle-container div{
+    min-width: 15rem;
+    height: 9rem;
+    border-radius: 20px;
+    margin-right: 0.8rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--2C394B);
+}
+
+.coins-middle-container img{
+    width: 5rem;
+    height: 5rem;
+    animation: imgefect 3s alternate ease-in-out infinite;
+}
+
+.coins-middle-container div:nth-child(2) img{
+    width: 6rem;
+    height: 6rem;
+}
+
+.coins-middle-container div:nth-child(6){
+    margin: 0;
+}
+
+.btc, .eth, .sol, .slp, .cake, .bnb{
+    color: #e6e6e6	;
+    text-align: left;
+}
+
+.btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+    font-size: 1.2rem;
+}
+
+.graphic-middle-container{
+    margin-top: 1.5rem;
+    height: 27rem;
+    border-radius: 20px;
+    background: var(--082032);
+}
+
+#graphic{ 
+    border-radius: 20px;
+}
+
+.right-aside-container{
+    width: 20rem;
+    margin: auto 1rem;
+}
+
+.balance{
+    width: 19rem;
+    height: 10rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--082032);
+    background: #5D8BF4;
+}
+
+.balance-content .header-balance-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.balance-content .footer-balance-content h1{
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+.balance-content .footer-balance-content p{
+    font-size: 1rem;
+    margin-top: -0.5rem;
+}
+
+.balance .balance-content .header-balance-content img{
+    width: 4rem;
+    height: 2rem;
+}
+
+.right-aside-container .transaction{
+    flex-flow: wrap;
+    width: 19rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    background: var(--334756);
+}
+
+.transaction .data-transaction{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction h1{
+    text-align: center;
+    color: #e6e6e6;
+}
+
+.transaction .data-transaction .data{
+    margin: auto;
+    width: 17rem;
+    height: 9rem;
+    max-height: 9rem;
+    overflow-x: hidden;
+}
+
+.transaction .data-transaction .data::-webkit-scrollbar{
+    background: var(--2C394B);
+    width: 0.5rem;
+}
+
+.transaction .data-transaction .data::-webkit-scrollbar-thumb{
+    background: var(--082032);
+    width: 0.5rem;
+}
+
+.transaction .data-transaction .button-transaction button{
+    height: 1.5rem;
+    width: 6rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+    border: none;
+    color: #e6e6e6;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--FF4C29);
+    cursor: pointer;
+}
+
+.transaction .data-transaction .input-balance{
+    width: 6rem;
+    height: 1.5rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+    margin-top: 0.2rem;
+}
+
+.deposit-balance, .withdraw-balance{
+    margin-bottom: 0.4rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.deposit-balance::before, .withdraw-balance::before{
+    content: '';
+    margin-left: 0.5rem;
+}
+
+.deposit-balance{
+    background: rgba(17, 248, 121, 0.815)
+}
+
+.withdraw-balance{
+    background: rgba(255, 58, 44, 0.815);
+}
+
+.right-aside-container .convert{
+    width: 19rem;
+    height: 12rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    background: var(--2C394B);
+    color: #e6e6e6;
+}
+
+.convert h1{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.convert #interface{
+    height: 10rem;
+}
+
+#interface #saida{
+    font-size: 1.5rem;
+}
+
+#interface #atualizacao{
+    font-size: 0.8rem;
+}
+
+.container-resultado{
+    background: var(--FF4C29);
+    border-radius: 20px;
+    width: 18rem;
+    max-height: 4rem;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.container-resultado::-webkit-scrollbar{
+    background: var(--082032);
+    width: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.container-resultado::-webkit-scrollbar-thumb{
+    background: var(--334756);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+#interface{
+    text-align: center;
+}
+
+.currency-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+
+.convert #entrada{
+    width: 6rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+}
+
+.convert #moedas{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+.convert button{
+    height: 2rem;
+    width: 10rem;
+    border-radius: 20px;
+    border: none;
+    color: #e6e6e6;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--FF4C29);
+    cursor: pointer;
+}
+
+
+
+@keyframes imgefect{
+    0%{
+        transform: translateY(5px);
+    }
+
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes load{
+    to{transform: rotate(360deg);}
+}
+
+
+@media (max-width: 1400px){
+    .header-container{
+        height: 3rem;
+    }
+
+    .left-header-container{
+        margin-left: 11rem;
+    }
+    
+    .right-header-container{
+        margin-right: 5rem;
+    }
+
+    .profile-right-header-container button{
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .left-aside-container{
+        width: 10rem;
+        height: 38rem;
+        margin-left: -1rem;
+    }
+
+    .top-aside-container, .bottom-aside-container{
+        margin: 0 2rem;
+    }
+
+    .top-aside-container h1{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .top-aside-container h2{
+        font-size: 1rem;
+    }
+
+    .top-aside-container div h2:hover{
+        font-size: 1.2rem;
+    }
+
+    .bottom-aside-container button{
+        width: 5rem;
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+
+    .container-content{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .middle-container{
+        width: 48rem;
+        height: 34rem;
+        margin: 1rem 1rem;
+    }
+
+    .coins-middle-container{
+        max-width: 48rem;
+        overflow-y: hidden;
+        border-radius: 20px;
+    }
+
+    .coins-middle-container div{
+        min-width: 15rem;
+        height: 8rem;
+    }
+
+    .coins-middle-container img{
+        width: 4rem;
+        height: 4rem;
+        animation: imgefect 3s alternate ease-in-out infinite;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .graphic-middle-container{
+        height: 27rem;
+    }
+
+    .right-aside-container{
+        width: 17rem;
+        margin: 0;
+    }
+
+    .balance{
+        width: 16rem;
+        height: 10rem;
+    }
+    
+    .balance-content .footer-balance-content h1{
+        font-size: 2rem;
+    }
+
+    .right-aside-container .transaction{
+        width: 16rem;
+    }
+
+    .transaction .data-transaction .data{
+        width: 16rem;
+        height: 7rem;
+        max-height: 7rem;
+    }
+
+    .deposit-balance, .withdraw-balance{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.4rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .right-aside-container .convert{
+        width: 16rem;
+    }
+    
+    .convert h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .convert #interface{
+        height: 8rem;
+    }
+    
+    #interface #saida{
+        font-size: 1.2rem;
+    }
+
+    .container-resultado{
+        background: var(--FF4C29);
+        border-radius: 20px;
+        width: 15rem;
+    }
+}
+
+@media (max-width: 1200px){
+    .left-aside-container{
+        height: 35rem;
+    }
+
+    .top-aside-container, .bottom-aside-container{
+        margin-left: 2rem;
+    }
+
+    .middle-container{
+        width: 40rem;
+        height: 31rem;
+        margin: 1rem 1rem;
+    }
+
+    .coins-middle-container{
+        max-width: 40rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 13rem;
+        height: 6rem;
+    }
+
+    .coins-middle-container img{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .graphic-middle-container{
+        height: 22rem;
+    }
+
+    .balance{
+        width: 14rem;
+        height: 8rem;
+    }
+
+    .balance-content .footer-balance-content h1{
+        font-size: 1.5rem;
+    }
+    
+    .balance-content .footer-balance-content p{
+        font-size: 0.8rem;
+        margin-top: -0.5rem;
+    }
+    
+    .balance .balance-content .header-balance-content img{
+        width: 3rem;
+        height: 1.5rem;
+    }
+
+    .right-aside-container .transaction{
+        width: 14rem;
+        height: 10.5rem;
+    }
+
+    .transaction .data-transaction .data{
+        width: 13rem;
+        height: 4rem;
+        max-height: 4rem;
+    }
+
+    .transaction .data-transaction .button-transaction button{
+        height: 1.2rem;
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+
+    .right-aside-container .convert{
+        width: 14rem;
+    }
+    
+    .convert h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .currency-button button{
+        font-size: 0.8rem;
+        height: 1.2rem;
+        width: 7rem;
+    }
+
+    .convert #interface{
+        height: 5rem;
+    }
+
+    .convert #entrada{
+        width: 4rem;
+    }
+    
+    #interface #saida{
+        font-size: 0.8rem;
+    }
+
+    .container-resultado{
+        margin-top: 0.5rem;
+        width: 12rem;
+    }
+}
+
+@media (max-width: 1000px){
+    .left-aside-container{
+        height: 36rem;
+    }
+
+    .middle-container{
+        width: 35rem;
+    }
+
+    .coins-middle-container{
+        max-width: 35rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 10rem;
+    }
+
+    .btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+        font-size: 0.8rem;
+    }
+
+    .coins-middle-container img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .graphic-middle-container{
+        height: 18rem;
+    }
+
+    .balance{
+        width: 12rem;
+    }
+
+    .right-aside-container .transaction{
+        width: 12rem;
+    }
+
+    .transaction .data-transaction .data{
+        width: 11rem;
+        height: 5rem;
+        max-height: 5rem;
+    }
+
+    .right-aside-container .convert{
+        width: 12rem;
+    }
+    
+    .convert h1, .right-aside-container .transaction h1{
+        font-size: 1.2rem;
+    }
+
+    .convert #interface{
+        height: 4rem;
+    }
+
+    .convert #entrada{
+        width: 3rem;
+    }
+    
+    #interface #saida{
+        font-size: 0.8rem;
+    }
+
+    .container-resultado{
+        margin-top: 0.5rem;
+        width: 12rem;
+    }
+}
+
+@media (max-width: 900px){
+    .left-header-container{
+        margin-left: 6rem;
+    }
+
+    .container-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 43rem;
+    }
+
+    .left-aside-container{
+        display: none;
+    }
+
+    .middle-container{
+        width: 50rem;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .coins-middle-container{
+        max-width: 55rem;
+    }
+
+    .btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+        font-size: 1.2rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 15rem;
+        height: 7rem;
+    }
+
+    .coins-middle-container img{
+        width: 4rem;
+        height: 4rem;
+        animation: imgefect 3s alternate ease-in-out infinite;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .graphic-middle-container{
+        height: 25rem;
+    }
+
+    .right-aside-container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 50rem;
+        max-width: 50rem;
+    }
+
+    .balance{
+        width: 15rem;
+        height: 10rem;
+        margin: 1rem;
+    }
+
+    .balance-content .footer-balance-content h1{
+        font-size: 2rem;
+    }
+    
+    .balance-content .footer-balance-content p{
+        font-size: 1rem;
+        margin-top: -0.5rem;
+    }
+
+    .right-aside-container .transaction{
+        width: 15rem;
+        height: 10rem;
+    }
+
+    .transaction .data-transaction .data{
+        width: 14rem;
+        height: 4.5rem;
+        max-height: 4.5rem;
+    }
+    
+    .right-aside-container .convert{
+        width: 15rem;
+        height: 10rem;
+        margin: 1rem;
+    }
+
+    .right-aside-container .currency-button button{
+        margin-top: -1rem;
+    }
+
+    .convert #interface{
+        height: 5rem;
+    }
+
+    .convert #entrada{
+        width: 3rem;
+    }
+
+    .container-resultado{
+        margin-top: 0.2rem;
+        max-height: 2.8rem;
+        width: 13rem;
+    }
+
+}
+
+@media (max-width: 750px){
+    .left-header-container{
+        margin-left: 4rem;
+    }
+
+    .container-content{
+        height: 55rem;
+        margin: 0 auto;
+    }
+
+    .middle-container{
+        width: 40rem;
+        padding: 1rem;
+    }
+
+    .coins-middle-container{
+        max-width: 40rem;
+    }
+
+    .btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+        font-size: 0.8rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 12rem;
+    }
+
+    .coins-middle-container img{
+        width: 3.5rem;
+        height: 3.5rem;
+        animation: imgefect 3s alternate ease-in-out infinite;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .graphic-middle-container{
+        height: 18rem;
+    }
+
+    .right-aside-container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 40rem;
+        max-width: 38rem;
+    }
+
+    .balance{
+        width: 15rem;
+        height: 10rem;
+        margin: 1rem;
+    }
+
+    .balance-content .footer-balance-content h1{
+        font-size: 2rem;
+    }
+    
+    .balance-content .footer-balance-content p{
+        font-size: 1rem;
+        margin-top: -0.5rem;
+    }
+
+    .right-aside-container .transaction{
+        width: 15rem;
+    }
+
+    .transaction .data-transaction .data{
+        width: 14rem;
+        height: 4.5rem;
+        max-height: 4.5rem;
+    }
+    
+    .right-aside-container .convert{
+        width: 15rem;
+        height: 10rem;
+        margin: 1rem;
+    }
+
+    .right-aside-container .currency-button button{
+        margin-top: -1rem;
+    }
+
+    .convert #interface{
+        height: 5rem;
+    }
+
+    .convert #entrada{
+        width: 3rem;
+    }
+
+    .container-resultado{
+        margin-top: 0.2rem;
+        max-height: 2.8rem;
+        width: 13rem;
+    }
+
+}
+
+@media (max-width: 600px){
+    .left-header-container{
+        margin-left: 2rem;
+    }
+
+    .right-header-container{
+        margin-right: 1rem;
+    }
+
+    .container-content{
+        flex-direction: column;
+        height: 65rem;
+        align-items: center;
+    }
+
+    .middle-container{
+        width: 30rem;
+    }
+
+    .coins-middle-container{
+        max-width: 30rem;
+    }
+
+    .btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+        font-size: 0.8rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 10rem;
+    }
+
+    .coins-middle-container img{
+        width: 3rem;
+        height: 3rem;
+        animation: imgefect 3s alternate ease-in-out infinite;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .graphic-middle-container{
+        width: 100%;
+        height: 15rem;
+    }
+
+    .right-aside-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .right-aside-container .balance, .right-aside-container .transaction, .right-aside-container .convert{
+        width: 70%;
+    }
+
+    .transaction .data-transaction .data{
+        width: 80%;
+        height: 4.5rem;
+        max-height: 4.5rem;
+    }
+
+    .container-resultado{
+        margin-top: 0.2rem;
+        max-height: 2.8rem;
+        width: 13rem;
+    }
+
+}
+
+@media (max-width: 480px){
+    .left-header-container {
+        margin-left: 1rem;
+    }
+
+    .left-header-container h1{
+        font-size: 1.5rem;
+    }
+
+    .middle-container{
+        width: 25rem;
+    }
+
+    .coins-middle-container{
+        max-width: 25rem;
+    }
+
+    .btc p, .eth p, .sol p, .slp p, .cake p, .bnb p{
+        font-size: 0.8rem;
+    }
+
+    .coins-middle-container div{
+        min-width: 8rem;
+    }
+
+    .coins-middle-container img{
+        width: 2.5rem;
+        height: 2.5rem;
+        animation: imgefect 3s alternate ease-in-out infinite;
+    }
+
+    .coins-middle-container div:nth-child(2) img{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .graphic-middle-container{
+        width: 100%;
+        height: 12rem;
+    }
+
+    .right-aside-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+}
+
