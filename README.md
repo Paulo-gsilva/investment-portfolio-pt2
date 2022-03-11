@@ -10,6 +10,7 @@ uma carteira que responde às transações feitas e uma conversor de moedas.</p>
   <li>Classes</li>
   <li>APIs</li>
   <li>Media queries</li>
+  <li>Armazenamento no LocalStorage</li>
 </ul>
 
 ## Carrossel de Criptos
